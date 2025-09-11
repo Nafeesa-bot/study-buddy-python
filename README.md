@@ -13,6 +13,7 @@ A Streamlit-based educational application that uses Google's Generative AI (Gemi
 ## 🛠️ Technologies Used
 
 - Python 3.12+
+- UV (Fast Python package installer and resolver)
 - Streamlit
 - Google Generative AI (Gemini)
 - Python-dotenv
@@ -27,24 +28,30 @@ A Streamlit-based educational application that uses Google's Generative AI (Gemi
 1. Clone the repository:
 
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/NaveenBen/study-buddy-python.git
    cd python-ai-teacher
    ```
 
-2. Create and activate a virtual environment:
+2. Install UV (if you haven't already):
 
    ```bash
-   python -m venv .venv
+   curl -LsSf https://astral.sh/uv/install.sh | sh
+   ```
+
+3. Create and activate a virtual environment:
+
+   ```bash
+   uv venv
    source .venv/bin/activate  # On Linux/macOS
    ```
 
-3. Install dependencies:
+4. Install dependencies using UV:
 
    ```bash
-   pip install -e .
+   uv sync
    ```
 
-4. Set up your environment variables:
+5. Set up your environment variables:
 
    ```bash
    export GEMINI_API_KEY="your_api_key"
